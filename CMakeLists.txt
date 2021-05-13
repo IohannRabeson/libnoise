@@ -1,7 +1,6 @@
 cmake_minimum_required( VERSION 3.0 )
 project( libnoise )
 
-set( CMAKE_BUILD_TYPE Release CACHE STRING "Build Type." FORCE )
 set( LIBNOISE_BUILD_SHARED_LIBS FALSE CACHE BOOL "Build shared libraries." )
 set( LIBNOISE_BUILD_DOC FALSE CACHE BOOL "Build Doxygen documentation." )
 
