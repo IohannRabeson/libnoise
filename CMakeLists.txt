@@ -1,4 +1,4 @@
-cmake_minimum_required( VERSION 2.8 )
+cmake_minimum_required( VERSION 3.0 )
 project( libnoise )
 
 set( CMAKE_BUILD_TYPE Release CACHE STRING "Build Type." FORCE )
@@ -102,9 +102,9 @@ set(
 	${SRC_DIR}/module/voronoi.cpp
 )
 
-include_directories( ${INC_DIR}/noise )
-
 add_library( libnoise ${LIB_TYPE} ${SOURCES} )
+
+target_include_directories( libnoise PUBLIC ${INC_DIR} PRIVATE ${INC_DIR}/noise)
 
 # GCC will automatically add the prefix lib
 if( CMAKE_COMPILER_IS_GNUCXX )
